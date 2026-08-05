@@ -71,6 +71,39 @@ export const subjects = [
   { id: 'howto', name: 'How To', path: '/learn/howto', category: 'Logic', icon: 'Zap', color: 'text-yellow-500', description: 'Step-by-step development guides.' },
   { id: 'spaces', name: 'Spaces', path: '/learn/spaces', category: 'Logic', icon: 'Box', color: 'text-blue-500', description: 'Manage and host your web projects.' },
   { id: 'typing_speed', name: 'Typing Speed', path: '/learn/typing-speed', category: 'Logic', icon: 'Terminal', color: 'text-gray-500', description: 'Improve your coding productivity.' },
+
+  // Development Modules
+  { id: 'payment_integration', name: 'Payment Integration', path: '/learn/payment_integration', category: 'Development', icon: 'CreditCard', color: 'text-emerald-500', description: 'End-to-End Payment Gateway Architecture & MERN Integration.' },
+
+  // Enterprise ERP & SAP
+  { id: 'sap_s4hana', name: 'SAP S/4HANA', path: '/learn/sap_s4hana', category: 'Enterprise ERP', icon: 'Box', color: 'text-blue-600', description: 'Next-generation intelligent ERP enterprise suite.' },
+  { id: 'sap_abap', name: 'SAP ABAP', path: '/learn/sap_abap', category: 'Enterprise ERP', icon: 'Code', color: 'text-blue-700', description: 'Advanced Business Application Programming for SAP.' },
+  { id: 'sap_fiori', name: 'SAP Fiori', path: '/learn/sap_fiori', category: 'Enterprise ERP', icon: 'Layout', color: 'text-blue-500', description: 'Modern UX design system for SAP software.' },
+  { id: 'sap_hana', name: 'SAP HANA', path: '/learn/sap_hana', category: 'Enterprise ERP', icon: 'Database', color: 'text-blue-800', description: 'In-memory relational database & analytics.' },
+  { id: 'sap_fico', name: 'SAP FICO', path: '/learn/sap_fico', category: 'Enterprise ERP', icon: 'CreditCard', color: 'text-indigo-600', description: 'Financial Accounting and Controlling modules.' },
+  { id: 'sap_mm', name: 'SAP MM', path: '/learn/sap_mm', category: 'Enterprise ERP', icon: 'Layers', color: 'text-amber-600', description: 'Materials Management & Supply Chain execution.' },
+  { id: 'sap_sd', name: 'SAP SD', path: '/learn/sap_sd', category: 'Enterprise ERP', icon: 'Send', color: 'text-green-600', description: 'Sales and Distribution enterprise management.' },
+
+  // Enterprise Platforms & ITSM
+  { id: 'servicenow', name: 'ServiceNow', path: '/learn/servicenow', category: 'Enterprise Platforms', icon: 'Cloud', color: 'text-emerald-600', description: 'Digital workflows & ITSM enterprise cloud platform.' },
+  { id: 'salesforce', name: 'Salesforce', path: '/learn/salesforce', category: 'Enterprise Platforms', icon: 'Cloud', color: 'text-sky-500', description: 'Leading CRM platform, Apex & Lightning Web Components.' },
+  { id: 'workday', name: 'Workday', path: '/learn/workday', category: 'Enterprise Platforms', icon: 'Briefcase', color: 'text-blue-600', description: 'Enterprise cloud HCM, Financials & Analytics.' },
+
+  // Integration & Middleware
+  { id: 'mulesoft', name: 'MuleSoft', path: '/learn/mulesoft', category: 'Integration', icon: 'GitBranch', color: 'text-cyan-600', description: 'Anypoint Platform for API-led enterprise integration.' },
+  { id: 'boomi', name: 'Dell Boomi', path: '/learn/boomi', category: 'Integration', icon: 'Zap', color: 'text-blue-500', description: 'Cloud-native iPaaS integration & workflow automation.' },
+  { id: 'kafka', name: 'Apache Kafka', path: '/learn/kafka', category: 'Integration', icon: 'Server', color: 'text-gray-900', description: 'Distributed event streaming & real-time pipelines.' },
+
+  // Cloud, DevOps & Modern Data
+  { id: 'docker', name: 'Docker', path: '/learn/docker', category: 'Cloud & DevOps', icon: 'Box', color: 'text-blue-500', description: 'Containerization & app deployment platform.' },
+  { id: 'kubernetes', name: 'Kubernetes', path: '/learn/kubernetes', category: 'Cloud & DevOps', icon: 'Cpu', color: 'text-blue-600', description: 'Automated container orchestration & scaling.' },
+  { id: 'azure', name: 'Microsoft Azure', path: '/learn/azure', category: 'Cloud & DevOps', icon: 'Cloud', color: 'text-blue-600', description: 'Microsoft cloud computing & infrastructure services.' },
+  { id: 'gcp', name: 'Google Cloud (GCP)', path: '/learn/gcp', category: 'Cloud & DevOps', icon: 'Cloud', color: 'text-red-500', description: 'Google Cloud Platform AI & cloud services.' },
+  { id: 'snowflake', name: 'Snowflake', path: '/learn/snowflake', category: 'Cloud & DevOps', icon: 'Database', color: 'text-cyan-400', description: 'Cloud data warehouse & analytics platform.' },
+
+  // BI & Business Analytics
+  { id: 'powerbi', name: 'Power BI', path: '/learn/powerbi', category: 'BI & Analytics', icon: 'Layers', color: 'text-yellow-600', description: 'Microsoft business intelligence & interactive dashboards.' },
+  { id: 'tableau', name: 'Tableau', path: '/learn/tableau', category: 'BI & Analytics', icon: 'Palette', color: 'text-blue-700', description: 'Visual analytics platform & data dashboards.' },
 ];
 
 export const sections = [
@@ -78,6 +111,12 @@ export const sections = [
   { name: 'BACKEND', items: ['java', 'python', 'php', 'c', 'cpp', 'csharp', 'go', 'kotlin', 'swift', 'rust', 'nodejs', 'django', 'asp'], icon: 'Server', color: 'text-slate-500' },
   { name: 'DATABASE', items: ['sql', 'mongodb', 'mysql', 'postgresql'], icon: 'Database', color: 'text-slate-500' },
   { name: 'DATA SCIENCE & AI', items: ['datascience', 'numpy', 'pandas', 'scipy', 'matplotlib', 'machinelearning', 'ai', 'genai', 'statistics', 'r'], icon: 'Bot', color: 'text-blue-500' },
+  { name: 'ENTERPRISE ERP & SAP', items: ['sap_s4hana', 'sap_abap', 'sap_fiori', 'sap_hana', 'sap_fico', 'sap_mm', 'sap_sd'], icon: 'Box', color: 'text-blue-600' },
+  { name: 'ENTERPRISE PLATFORMS & ITSM', items: ['servicenow', 'salesforce', 'workday'], icon: 'Cloud', color: 'text-emerald-600' },
+  { name: 'INTEGRATION & MIDDLEWARE', items: ['mulesoft', 'boomi', 'kafka'], icon: 'GitBranch', color: 'text-cyan-600' },
+  { name: 'CLOUD & DEVOPS', items: ['docker', 'kubernetes', 'azure', 'gcp', 'snowflake'], icon: 'Cpu', color: 'text-indigo-600' },
+  { name: 'BI & BUSINESS ANALYTICS', items: ['powerbi', 'tableau'], icon: 'Layers', color: 'text-amber-600' },
   { name: 'TOOLS & INFRA', items: ['git', 'postman', 'excel', 'xml', 'bash', 'aws', 'cybersecurity', 'rpi', 'downloads'], icon: 'Wrench', color: 'text-amber-700' },
-  { name: 'LOGIC & FUNDAMENTALS', items: ['dsa', 'programming_intro', 'web_intro', 'howto', 'spaces', 'typing_speed'], icon: 'Layers', color: 'text-indigo-600' }
+  { name: 'LOGIC & FUNDAMENTALS', items: ['dsa', 'programming_intro', 'web_intro', 'howto', 'spaces', 'typing_speed'], icon: 'Layers', color: 'text-indigo-600' },
+  { name: 'DEVELOPMENT MODULES', items: ['payment_integration'], icon: 'CreditCard', color: 'text-emerald-500' }
 ];

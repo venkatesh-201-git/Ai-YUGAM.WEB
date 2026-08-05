@@ -15,37 +15,37 @@ const NotFound = () => {
         {/* Visual Element */}
         <div className="relative inline-block max-w-full group">
            <div className="absolute inset-0 bg-secondary/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-1000"></div>
-           <div className="relative p-10 bg-white dark:bg-gray-800 rounded-full shadow-2xl border border-gray-100 dark:border-gray-700 animate-float">
-             <Cpu className="w-20 h-20 md:w-32 md:h-32 text-secondary" />
+           <div className="relative p-6 sm:p-10 bg-white dark:bg-gray-800 rounded-full shadow-2xl border border-gray-100 dark:border-gray-700 animate-float">
+             <Cpu className="w-12 h-12 sm:w-20 sm:h-20 md:w-32 md:h-32 text-secondary" />
            </div>
            
-           <div className="absolute -top-4 -right-4 bg-red-500 text-white px-5 py-2 rounded-2xl font-black text-xl md:text-2xl shadow-xl shadow-red-500/30 transform rotate-12 transition-transform group-hover:rotate-0">
+           <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 bg-red-500 text-white px-3 sm:px-5 py-1 sm:py-2 rounded-xl sm:rounded-2xl font-black text-sm sm:text-xl md:text-2xl shadow-xl shadow-red-500/30 transform rotate-12 transition-transform group-hover:rotate-0">
              404
            </div>
         </div>
 
-        <div className="space-y-6">
-           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-gray-900 dark:text-white tracking-tighter leading-tight italic font-serif">
+        <div className="space-y-3 sm:space-y-6">
+           <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-gray-900 dark:text-white tracking-tighter leading-tight italic font-serif">
              Lost in the <span className="text-secondary">Cloud?</span>
            </h1>
-           <p className="text-lg md:text-xl text-gray-500 dark:text-gray-400 font-medium leading-relaxed max-w-lg mx-auto">
+           <p className="text-xs sm:text-lg md:text-xl text-gray-500 dark:text-gray-400 font-medium leading-relaxed max-w-lg mx-auto">
              The page you're searching for has either been moved to another dimension or never existed in this timeline.
            </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-10">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-6 sm:pt-10">
            <Link 
              to="/" 
-             className="w-full sm:w-auto flex items-center justify-center gap-3 px-10 py-5 bg-secondary text-white font-black rounded-3xl hover:bg-blue-600 hover:shadow-2xl hover:shadow-blue-500/20 active:scale-95 transition-all group"
+             className="w-full sm:w-auto flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-10 py-3 sm:py-5 bg-secondary text-white font-black text-xs sm:text-base rounded-2xl sm:rounded-3xl hover:bg-blue-600 hover:shadow-2xl hover:shadow-blue-500/20 active:scale-95 transition-all group"
            >
-             <Home className="w-5 h-5 group-hover:scale-110 transition-transform" />
+             <Home className="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform" />
              Back to Reality
            </Link>
            <button 
              onClick={() => window.location.reload()}
-             className="w-full sm:w-auto flex items-center justify-center gap-3 px-10 py-5 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white font-black rounded-3xl hover:bg-gray-200 dark:hover:bg-gray-700 active:scale-95 transition-all group"
+             className="w-full sm:w-auto flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-10 py-3 sm:py-5 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white font-black text-xs sm:text-base rounded-2xl sm:rounded-3xl hover:bg-gray-200 dark:hover:bg-gray-700 active:scale-95 transition-all group"
            >
-             <RefreshCw className="w-5 h-5 group-hover:rotate-180 transition-transform duration-700" />
+             <RefreshCw className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-180 transition-transform duration-700" />
              Reconstruct Page
            </button>
         </div>
