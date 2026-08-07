@@ -129,37 +129,25 @@ const TopicPage = () => {
       {/* Main Content Area */}
       <main className="flex-1 overflow-y-auto flex flex-col items-center bg-white dark:bg-[#1a1a1a] transition-all relative font-sans w-full">
         
-        {/* Navigation Bar/Breadcrumb with FULLSCREEN Toggle */}
-        <header className="sticky top-0 z-[50] w-full bg-white/90 dark:bg-[#1a1a1a]/90 backdrop-blur-md border-b dark:border-gray-800 px-2.5 sm:px-4 py-2 sm:py-2.5 flex items-center justify-between shadow-sm">
-          <div className="flex items-center gap-2 max-w-[65%] sm:max-w-[70%] overflow-hidden">
-             <button onClick={() => setIsSidebarOpen(true)} title="Open Topics Menu" className="lg:hidden flex items-center gap-1 px-1.5 py-1 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 transition-colors flex-shrink-0">
-                <Menu className="w-3.5 h-3.5 text-gray-600 dark:text-gray-300" />
-                <span className="text-[7px] sm:text-[8px] font-bold uppercase text-gray-600 dark:text-gray-300">Topics</span>
+        {/* Fixed Header Bar with FULLSCREEN Toggle & Topics Menu */}
+        <header className="sticky top-0 z-[50] w-full bg-white/90 dark:bg-[#1a1a1a]/90 backdrop-blur-md border-b dark:border-gray-800 px-3 sm:px-6 py-2 flex items-center justify-between shadow-sm">
+          <div className="flex items-center gap-2">
+             <button onClick={() => setIsSidebarOpen(true)} title="Open Topics Menu" className="lg:hidden flex items-center gap-1.5 px-2.5 py-1 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-xs font-semibold transition-colors">
+                <Menu className="w-4 h-4 text-gray-600 dark:text-gray-300" />
+                <span>Topics</span>
              </button>
-             <nav className="flex items-center text-[9px] sm:text-[10px] font-bold text-gray-400 gap-1 sm:gap-1.5 uppercase tracking-wider whitespace-nowrap overflow-x-auto scrollbar-hide">
-                <Link to="/" className="hover:text-secondary transition-colors">Portal</Link>
-                <ChevronRight className="w-3 h-3 opacity-30 flex-shrink-0" />
-                <span className="text-secondary font-black">{subject.name}</span>
-                <ChevronRight className="w-3 h-3 opacity-30 flex-shrink-0" />
-                <span className="text-gray-800 dark:text-gray-200 font-semibold truncate">{activeTopic?.title}</span>
-             </nav>
           </div>
 
-          {/* Full Screen Reading Mode Toggle Button */}
-          <div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
-             <button 
-               onClick={() => setIsFullScreen(!isFullScreen)}
-               aria-label="Toggle Full Screen Reading Mode"
-               title={isFullScreen ? "Exit Fullscreen Reading Mode" : "Enter Fullscreen Reading Mode"}
-               className="flex items-center gap-1 px-2 py-1 bg-sky-500/10 hover:bg-sky-500/20 text-sky-700 dark:text-sky-300 rounded-lg border border-sky-400/30 text-[7px] sm:text-[8px] font-bold transition-all active:scale-95 shadow-sm"
-             >
-                {isFullScreen ? <Minimize2 className="w-3.5 h-3.5" /> : <Maximize2 className="w-3.5 h-3.5" />}
-                <span className="text-[7px] sm:text-[8px] font-bold uppercase tracking-wider">{isFullScreen ? 'Exit Fullscreen' : 'Fullscreen'}</span>
-             </button>
-             <div className="text-[8px] font-black italic text-secondary uppercase tracking-[0.2em] hidden md:block bg-secondary/10 px-2 py-0.5 rounded-full border border-secondary/20">
-                SYS_READY // V.2026
-             </div>
-          </div>
+          {/* Fullscreen Toggle Button */}
+          <button 
+            onClick={() => setIsFullScreen(!isFullScreen)}
+            aria-label="Toggle Full Screen Reading Mode"
+            title={isFullScreen ? "Exit Fullscreen Mode" : "Enter Fullscreen Mode"}
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-sky-500/10 hover:bg-sky-500/20 text-sky-700 dark:text-sky-300 rounded-xl border border-sky-400/30 text-xs font-semibold transition-all active:scale-95 shadow-sm"
+          >
+             {isFullScreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
+             <span>{isFullScreen ? 'Exit Fullscreen' : 'Fullscreen'}</span>
+          </button>
         </header>
 
         <AnimatePresence mode="wait">
@@ -173,7 +161,7 @@ const TopicPage = () => {
               className="w-full max-w-4xl px-2.5 sm:px-8 py-4 sm:py-6 md:py-10 space-y-5 sm:space-y-6 md:space-y-8"
             >
               <div className="space-y-2">
-                 <h1 className="text-base sm:text-xl md:text-2xl lg:text-3xl font-black uppercase tracking-tight leading-snug bg-gradient-to-r from-gray-900 via-emerald-700 to-teal-600 dark:from-white dark:via-emerald-400 dark:to-teal-300 bg-clip-text text-transparent break-words">
+                 <h1 className="text-lg sm:text-2xl md:text-3xl font-bold tracking-tight leading-snug bg-gradient-to-r from-gray-900 via-emerald-700 to-teal-600 dark:from-white dark:via-emerald-400 dark:to-teal-300 bg-clip-text text-transparent break-words">
                    {activeTopic.title}
                  </h1>
                  <motion.div 
@@ -201,13 +189,13 @@ const TopicPage = () => {
               </div>
 
               <div 
-                className="prose prose-sm sm:prose-base dark:prose-invert max-w-none prose-headings:font-extrabold prose-headings:uppercase prose-headings:tracking-tight prose-h1:text-xl prose-h2:text-base sm:prose-h2:text-lg prose-h2:mt-6 prose-h2:mb-3 prose-h2:border-b prose-h2:border-gray-200 dark:prose-h2:border-gray-800 prose-h2:pb-1.5 prose-h3:text-sm sm:prose-h3:text-base prose-h3:text-secondary dark:prose-h3:text-emerald-400 prose-h3:mt-4 prose-h3:mb-2 prose-h4:text-xs sm:prose-h4:text-sm prose-h4:font-bold prose-p:text-xs sm:prose-p:text-sm prose-p:leading-relaxed prose-li:text-xs sm:prose-li:text-sm"
+                className="prose prose-sm sm:prose-base dark:prose-invert max-w-none prose-headings:font-bold prose-h1:text-lg sm:prose-h1:text-xl prose-h2:text-base sm:prose-h2:text-lg prose-h2:font-semibold prose-h2:mt-6 prose-h2:mb-3 prose-h2:border-b prose-h2:border-gray-200 dark:prose-h2:border-gray-800 prose-h2:pb-1.5 prose-h3:text-sm sm:prose-h3:text-base prose-h3:font-semibold prose-h3:text-secondary dark:prose-h3:text-emerald-400 prose-h3:mt-4 prose-h3:mb-2 prose-h4:text-xs sm:prose-h4:text-sm prose-h4:font-semibold prose-p:text-sm sm:prose-p:text-base prose-p:text-gray-900 dark:prose-p:text-gray-100 prose-p:leading-relaxed prose-li:text-sm sm:prose-li:text-base prose-li:text-gray-900 dark:prose-li:text-gray-100"
                 dangerouslySetInnerHTML={{ __html: activeTopic.content }} 
               />
 
               {activeTopic.codeExample && (
                 <div className="pt-6 space-y-3">
-                   <h3 className="text-sm sm:text-base font-extrabold text-gray-900 dark:text-white uppercase flex items-center gap-2">
+                   <h3 className="text-sm sm:text-base font-bold text-gray-900 dark:text-white flex items-center gap-2">
                       <div className="p-1 rounded-md bg-secondary/10 text-secondary">
                         <Terminal className="w-4 h-4" />
                       </div>
@@ -215,6 +203,13 @@ const TopicPage = () => {
                    </h3>
                    <CodeEditor initialCode={activeTopic.codeExample} />
                 </div>
+              )}
+
+              {activeTopic.extraContent && (
+                <div 
+                  className="prose prose-sm sm:prose-base dark:prose-invert max-w-none pt-8 prose-headings:font-bold prose-h1:text-lg sm:prose-h1:text-xl prose-h2:text-base sm:prose-h2:text-lg prose-h2:font-semibold prose-h2:mt-6 prose-h2:mb-3 prose-h2:border-b prose-h2:border-gray-200 dark:prose-h2:border-gray-800 prose-h2:pb-1.5 prose-h3:text-sm sm:prose-h3:text-base prose-h3:font-semibold prose-h3:text-secondary dark:prose-h3:text-emerald-400 prose-h3:mt-4 prose-h3:mb-2 prose-h4:text-xs sm:prose-h4:text-sm prose-h4:font-semibold prose-p:text-sm sm:prose-p:text-base prose-p:text-gray-900 dark:prose-p:text-gray-100 prose-p:leading-relaxed prose-li:text-sm sm:prose-li:text-base prose-li:text-gray-900 dark:prose-li:text-gray-100"
+                  dangerouslySetInnerHTML={{ __html: activeTopic.extraContent }} 
+                />
               )}
 
               {/* Bottom Pagination (Classic) - Hidden on mobile */}

@@ -117,7 +117,7 @@ const CodeEditor = ({ initialCode = '' }) => {
             </div>
             
             <div className="flex items-center p-0.5 bg-black rounded-xl border border-white/5">
-               <button onClick={() => setActiveTab('editor')} className={`px-2.5 sm:px-4 md:px-6 py-1 sm:py-2 text-[8px] sm:text-[9px] font-black uppercase tracking-widest rounded-lg transition-all ${activeTab === 'editor' ? 'bg-secondary text-white shadow-lg' : 'text-gray-500 hover:text-gray-300'}`}>Source</button>
+               <button onClick={() => setActiveTab('editor')} className={`px-2.5 sm:px-4 md:px-6 py-1 sm:py-2 text-[8px] sm:text-[9px] font-black uppercase tracking-widest rounded-lg transition-all ${activeTab === 'editor' ? 'bg-secondary text-white shadow-lg' : 'text-gray-500 hover:text-gray-300'}`}>Code</button>
                <button onClick={() => setActiveTab('preview')} className={`px-2.5 sm:px-4 md:px-6 py-1 sm:py-2 text-[8px] sm:text-[9px] font-black uppercase tracking-widest rounded-lg transition-all ${activeTab === 'preview' ? 'bg-secondary text-white shadow-lg' : 'text-gray-500 hover:text-gray-300'}`}>Runtime</button>
             </div>
          </div>
